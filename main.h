@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <stddef.h>
 int _printf(const char *format, ...);
-int (*_check(const char *format))(va_list);
+int (*_check(const char *))(va_list);
 /**
  * struct func - struct for specifier to printer
  * @t: character to compare
@@ -20,4 +20,6 @@ typedef struct func
 int print_char(va_list args);
 int print_cent(va_list args);
 int print_str(va_list args);
+int print_int(va_list);
+int print_dec(va_list);
 #endif

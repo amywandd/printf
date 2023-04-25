@@ -10,10 +10,12 @@
 int (*_check(const char *format))(va_list)
 {
 int i;
-func_t my_array[4] = {
+func_t my_array[6] = {
 	{"c", print_char},
 	{"s", print_str},
 	{"%", print_cent},
+	{"i", print_int},
+	{"d", print_dec},
 	{NULL, NULL}};
 for (i = 0; my_array[i].t != NULL; i++)
 {
